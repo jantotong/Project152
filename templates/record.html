@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Open Speech Recording</title>
+         <link href="static/styles/app.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="image" ontouchstart="showtime(event)" onclick="showtime()">
+        <img src="static/styles/umec.jpg" height="80">
+    </div>
+    <header>
+        <h1>Speech Recorder</h1>
+    </header>
+
+    <br/>
+
+    <!--
+    <select id="ddlViewBy">
+        <option value="null">Select</option>
+        <option value="jttong">Jason</option>
+        <option value="markmok">Mark</option>
+        <option value="seanyong">Sean</option>
+        <option value="chchan">Hong</option>
+        <option value="walterchow">Walter</option>
+        <option value="xiaohuo">Shawn</option>
+        <option value="jacobmok">Jacob</option>
+        <option value="mcchan">Man Chi</option>
+        <option value="viannechan">Vianne</option>
+        <option value="hzchen">Hong Zao</option>
+        <option value="kaytoncheung">Kayton</option>
+        <option value="khchiu">King Hung</option>
+        <option value="kacychoi">Kacy</option>
+        <option value="davidchu">David</option>
+        <option value="pcchung">Ryan</option>
+        <option value="mkieong">Mei Kei</option>
+        <option value="yzjiao">Yu Zhong</option>
+        <option value="ylan">Ying</option>
+        <option value="yuanlei">Yuan</option>
+        <option value="shali">Sha</option>
+        <option value="shenglin">Sheng</option>
+        <option value="ykli">Yiu Kei</option>
+        <option value="carmenliu">Carmen</option>
+        <option value="dicklui">Dick</option>
+        <option value="pengluo">Peng</option>
+        <option value="twshen">Tak Wai</option>
+        <option value="stephaniesong">Stephanie</option>
+        <option value="dpwang">Dong Peng</option>
+        <option value="fionawang">Fiona</option>
+        <option value="yotoyi">Yoto</option>
+        <option value="linlew">Lin</option>
+
+
+    </select>
+    -->
+    <body onkeypress="showChar(event);">
+
+
+    <form style="text-align:center;" id="name_box" onchange="changeBoxColor();">
+        <h3> Enter Your Name </h3>
+        <h3> (English characters only)</h3>
+        <input type="text" id="user_name">
+    </form>
+
+    <section class="top-display">
+        <div class="directions" id="instruction">
+            Press Record to start
+            <br/>
+            First speak English characters, then Chinese characters
+            <br/>
+            Speak when the Record button turns red
+            <br/>
+            UMEC pronounced as "YOU-MAC"
+            <br/>
+            Upon error, email jttong@umechk.com
+        </div>
+        <div class="progress-display">
+        </div>
+        <div class="info-display">
+        </div>
+    </section>
+
+    <section class="main-controls" id="main">
+        <canvas class="visualizer"></canvas>
+        <div id="buttons">
+            <button class="record">Record</button>
+            <button class="stop">Stop</button>
+            <button class="upload">Upload</button>
+        </div>
+    </section>
+
+    <section class="sound-clips">
+    </section>
+
+</div>
+
+<footer>
+    <a>UMEC(HK)</a>
+</footer>
+<script src="{{url_for('static', filename='/scripts/app.js')}}"></script>
+
+</body>
+</html>
